@@ -7,11 +7,11 @@ require('require-dir')('gulp-tasks');
 //used for releasing
 require('gulp-release-tasks')(gulp);
 
-gulp.task('dist', ['bower', 'less', 'browserify', 'example']);
+gulp.task('dist', ['bower', 'browserify']);
 
 gulp.task('default', function(callback) {
     runSequence(
-        ['lint', 'bower', 'templates'],
+        ['lint', 'bower'],
         'karma',
         'dist',
         callback);
