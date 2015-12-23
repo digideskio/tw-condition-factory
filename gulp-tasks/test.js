@@ -1,11 +1,11 @@
 var gulp = require('gulp');
 var KarmaServer = require('karma').Server;
 
-gulp.task('karma', [], function(done) {
+gulp.task('karma', function(done) {
     testKarma('/../test/config/karma.conf.js', done);
 });
 
-gulp.task('testWithReport', [], function(done) {
+gulp.task('testWithReport', function(done) {
     testKarma('/../test/config/karma.report.conf.js', done);
 });
 
