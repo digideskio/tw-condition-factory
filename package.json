@@ -1,6 +1,6 @@
 {
   "name": "tw-condition-factory",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create conditions that can return promises and provide an onError callback",
   "scripts": {
     "test": "gulp test"
