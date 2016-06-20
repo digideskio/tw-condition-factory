@@ -84,6 +84,31 @@ describe('Service: ConditionFactory', function() {
             expect(rejection).toEqual(undefined);
         });
 
+        it("resolve should apply arguments to check function correctly", function () {
+            function areEqual(a, b) { return a === b  }
+
+            var condition = ConditionFactory.createCondition(
+                areEqual,
+                DEFAULT_ON_ERROR
+            );
+            var rejection;
+            condition.resolve(2, 2)
+                .catch(function (res) {
+                    rejection = res;
+                });
+            $rootScope.$apply();
+            expect(rejection).toEqual(undefined);
+
+            condition.resolve(2, 3)
+                .catch(function (res) {
+                    rejection = res;
+                });
+            $rootScope.$apply();
+
+            expect(rejection.type).toEqual(ConditionFactory.CONDITION_TYPE);
+            expect(rejection.onError).toEqual(DEFAULT_ON_ERROR);
+        });
+
     });
 
     describe("createReversedCondition", function () {

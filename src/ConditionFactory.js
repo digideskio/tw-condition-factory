@@ -32,7 +32,7 @@ module.exports = function ConditionFactory($q) {
         return {
             check: check,
             resolve: function() {
-                return  $q.when(check())
+                return  $q.when(check.apply(this, arguments))
                     .then(function(condition) {
                         if (!condition) {
                             return $q.reject(formatRejection(onError));
