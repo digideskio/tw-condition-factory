@@ -173,6 +173,35 @@ describe('Service: ConditionFactory', function() {
             expect(revRejection).toEqual(undefined);
         });
 
+        it("should handle arguments", function () {
+            function areEqual(a, b) { return a === b  }
+
+            var condition = ConditionFactory.createCondition(
+                areEqual,
+                DEFAULT_ON_ERROR
+            );
+            var reversedCondition = ConditionFactory.createReversedCondition(
+                condition,
+                reversedConditionOnError);
+
+            var rejection;
+            reversedCondition.resolve(3, 2)
+                .catch(function (res) {
+                    rejection = res;
+                });
+            $rootScope.$apply();
+            expect(rejection).toEqual(undefined);
+
+            reversedCondition.resolve(2, 2)
+                .catch(function (res) {
+                    rejection = res;
+                });
+            $rootScope.$apply();
+
+            expect(rejection.type).toEqual(ConditionFactory.CONDITION_TYPE);
+            expect(rejection.onError).toEqual(reversedConditionOnError);
+        });
+
     });
 
 });

@@ -67,7 +67,7 @@ module.exports = function ConditionFactory($q) {
 
     function reverseConditionCheck(condition) {
         return function() {
-            return $q.when(condition.check())
+            return $q.when(condition.check.apply(this, arguments))
                 .then(function(condition) {
                     return !condition;
                 });
