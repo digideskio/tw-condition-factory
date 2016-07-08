@@ -1,5 +1,7 @@
 # Condition Factory Angular Component
 
+`npm install ng-conditions`
+
 [![Build Status](https://travis-ci.org/transferwise/tw-condition-factory.svg)](https://travis-ci.org/transferwise/tw-condition-factory)
 
 ## Usage
