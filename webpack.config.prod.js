@@ -3,7 +3,10 @@ var prodConfig = require('./webpack.config');
 var packageName = require('./package.json').name;
 
 prodConfig.plugins = [
-  new webpack.optimize.UglifyJsPlugin({compress: { warnings: false }})
+  new webpack.optimize.UglifyJsPlugin({
+    compress: { warnings: false },
+    mangle: false
+  })
 ];
 
 prodConfig.output.filename = packageName + '.min.js';
