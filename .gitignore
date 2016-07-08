@@ -1,14 +1,9 @@
-##INTELLIJ FILES
 *.iml
 .idea
+.github_env
 
-## npm and bower FILES
 node_modules
-bower_components
-
-## build files
 build
-
-
-## lib dependencies
 libs
+
+dist
