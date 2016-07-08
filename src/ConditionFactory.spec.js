@@ -4,7 +4,7 @@ import Module from './module';
 describe('Service: ConditionFactory', function() {
     var $q, $rootScope, ConditionFactory;
 
-    beforeEach(angular.mock.module('tw-condition-factory'));
+    beforeEach(angular.mock.module('ng-conditions'));
 
     beforeEach(inject(function($injector) {
         ConditionFactory = $injector.get('ConditionFactory');
