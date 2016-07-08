@@ -9,9 +9,6 @@
   "files": [
     "dist"
   ],
-  "bin": {
-    "build-dist": "bin/build-dist.js"
-  },
   "repository": {
     "type": "git",
     "fullname": "transferwise/tw-condition-factory",
