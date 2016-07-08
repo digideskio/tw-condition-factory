@@ -1,8 +1,4 @@
-'use strict';
-
-var angular = require('angular');
-
-module.exports = function ConditionFactory($q) {
+function ConditionFactory($q) {
 
     var self = this;
     var ARG_VALIDATIONS = {
@@ -80,5 +76,6 @@ module.exports = function ConditionFactory($q) {
             onError: onError
         };
     }
-
 };
+
+export default ConditionFactory

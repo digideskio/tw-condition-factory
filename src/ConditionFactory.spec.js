@@ -1,6 +1,5 @@
-'use strict';
-
-require('../src/twConditionFactoryModule');
+import angular from 'angular';
+import Module from './module';
 
 describe('Service: ConditionFactory', function() {
     var $q, $rootScope, ConditionFactory;

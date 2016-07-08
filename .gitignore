@@ -1,14 +1,8 @@
-##INTELLIJ FILES
 *.iml
 .idea
 
-## npm and bower FILES
 node_modules
-bower_components
-
-## build files
 build
-
-
-## lib dependencies
 libs
+
+dist
