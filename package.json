@@ -1,6 +1,6 @@
 {
   "name": "ng-conditions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create conditions that can return promises and provide an onError callback",
   "scripts": {
     "test": "karma start",
