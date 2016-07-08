@@ -1,5 +1,7 @@
 *.iml
 .idea
+npm-debug.log
+
 .github_env
 
 node_modules
