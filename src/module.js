@@ -1,8 +1,9 @@
 import angular from 'angular';
 import ConditionFactory from './ConditionFactory';
 
+
 const conditionFactoryModule = angular
-  .module('tw-condition-factory', [])
+  .module('ng-conditions', [])
   .service('ConditionFactory', ConditionFactory);
 
 export default conditionFactoryModule;

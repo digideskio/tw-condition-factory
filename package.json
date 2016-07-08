@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Create conditions that can return promises and provide an onError callback",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "release": "release-to-github"
   },
   "files": [
     "dist"
@@ -13,6 +14,7 @@
   },
   "repository": {
     "type": "git",
+    "fullname": "transferwise/tw-condition-factory",
     "url": "git@github.com:transferwise/tw-condition-factory.git"
   },
   "keywords": [
@@ -42,6 +44,7 @@
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
+    "release-to-github": "0.0.4",
     "shelljs": "^0.7.0",
     "underscore": "^1.8.3",
     "webpack": "^1.13.1"
